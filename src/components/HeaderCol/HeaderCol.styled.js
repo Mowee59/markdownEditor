@@ -8,7 +8,6 @@ const StyledHeaderCol = styled.header`
   min-height: 4.2rem;
   background-color:${(props) => props.theme.menuBackground} ;
   font-size: 1.4rem;
-  color: ${(props) => props.theme.textColor};
   text-transform: uppercase;
   font-family: 'Roboto';
   font-weight: 400 ;

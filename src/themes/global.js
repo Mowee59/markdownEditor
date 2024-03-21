@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body {
    
     font-family: 'Roboto', Sans-Serif;
+    font-weight: 400;
     background-color: ${(props) => props.theme.mainBackground};
     color:${(props) => props.theme.textColor} ;
   }

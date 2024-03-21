@@ -12,13 +12,16 @@
  const LIGHTEST_GREY= "#F5F5F5";
  const WHITE=  "#FFF";
  const ORANGE= "#E46643";
- const LIGHT_ORANGE= "#F39765";
+const LIGHT_ORANGE= "#F39765";
 
 
 export const lightTheme = {
   mainBackground : WHITE,
   border : DARKEST_GREY,
-  textColor : DARKEST_BLACK
+  menuBackground : BLACK,
+  textColor : DARKEST_BLACK,
+  btnIdle : ORANGE,
+  btnHover :LIGHT_ORANGE
 };
 
 export const darkTheme = {
@@ -26,7 +29,9 @@ export const darkTheme = {
   mainBackground : DARKEST_BLACK,
   border : DARKEST_GREY,
   textColor : GREY,
-  menuBackground : BLACK
+  menuBackground : BLACK,
+  btnIdle : ORANGE,
+  btnHover :LIGHT_ORANGE
 
 };
 
