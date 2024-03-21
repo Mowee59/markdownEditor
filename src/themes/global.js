@@ -1,4 +1,3 @@
-import Palette from './Palette.js'
 
 import { createGlobalStyle } from "styled-components";
 
@@ -12,8 +11,8 @@ const GlobalStyle = createGlobalStyle`
   body {
    
     font-family: 'Roboto', Sans-Serif;
-    background: ${Palette.LIGHTEST_GREY};
-    color: white;
+    background-color: ${(props) => props.theme.mainBackground};
+    color:${(props) => props.theme.textColor} ;
   }
 
   html {
@@ -22,6 +21,8 @@ const GlobalStyle = createGlobalStyle`
   line-height: 1;
   font-weight: 400;
 }
+
+
 `;
 
 export default GlobalStyle;
