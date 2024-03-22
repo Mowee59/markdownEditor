@@ -14,6 +14,8 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     background-color: ${(props) => props.theme.mainBackground};
     color:${(props) => props.theme.textColor} ;
+    scrollbar-color: ${(props) => props.theme.mainBackground} ${(props) => props.theme.menuBackground} ;
+    scrollbar-width: thin;
   }
 
   html {

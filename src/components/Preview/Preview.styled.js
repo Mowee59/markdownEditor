@@ -20,7 +20,7 @@ const PreviewScrollDiv = styled.div`
   & h1 {
     font-size: 3.2rem;
     font-weight: bold;
-    margin: 3.6rem 0 3.6rem;
+    line-height: 6rem;
   }
 
   h2 {
