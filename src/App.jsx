@@ -19,9 +19,11 @@ function App() {
       <GlobalStyle />
       <MarkdownProvider>
         <MainLayout>
+          
           <MainLayout.Col>
             <Editor />
           </MainLayout.Col>
+          
           <MainLayout.Col>
            <Preview/>
           </MainLayout.Col >
