@@ -12,10 +12,10 @@ const PreviewScrollDiv = styled.div`
   overflow: auto;
   padding: 1.6rem;
   font-family: 'Roboto Slab', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.4rem;
   line-height: 2.4rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.18rem;
 
   & h1 {
     font-size: 3.2rem;

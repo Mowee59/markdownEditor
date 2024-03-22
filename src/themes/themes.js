@@ -18,7 +18,7 @@ const LIGHT_ORANGE= "#F39765";
 export const lightTheme = {
   mainBackground : WHITE,
   border : DARKEST_GREY,
-  menuBackground : BLACK,
+  menuBackground : LIGHTEST_GREY,
   textColor : DARKEST_BLACK,
   btnIdle : ORANGE,
   btnHover :LIGHT_ORANGE
