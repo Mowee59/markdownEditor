@@ -22,7 +22,9 @@ export const lightTheme = {
   textColor : DARKEST_BLACK,
   btnIdle : ORANGE,
   btnHover :LIGHT_ORANGE,
-  headingColor : BLACK  
+  headingColor : BLACK,
+  appHeaderBackground: LIGHTER_BLACK,
+  menuButtonBackground : LIGHTEST_BLACK 
 };
 
 export const darkTheme = {
@@ -33,7 +35,9 @@ export const darkTheme = {
   menuBackground : BLACK,
   btnIdle : ORANGE,
   btnHover :LIGHT_ORANGE,
-  headingColor : WHITE
+  headingColor : WHITE,
+  appHeaderBackground: LIGHTER_BLACK,
+  menuButtonBackground : LIGHTEST_BLACK
 
 };
 

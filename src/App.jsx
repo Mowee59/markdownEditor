@@ -7,6 +7,7 @@ import MarkdownProvider from "./providers/markdown-provider/MarkdownProvider.jsx
 import MainLayout from "./components/Layout/MainLayout.jsx";
 import Editor from "./components/Editor/Editor.jsx";
 import Preview from "./components/Preview/Preview.jsx";
+import AppHeader from "./components/AppHeading/AppHeader.jsx";
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyle />
       <MarkdownProvider>
+
+      <AppHeader/>
         <MainLayout>
           
           <MainLayout.Col>
