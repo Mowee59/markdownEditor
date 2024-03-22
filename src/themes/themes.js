@@ -21,7 +21,8 @@ export const lightTheme = {
   menuBackground : LIGHTEST_GREY,
   textColor : DARKEST_BLACK,
   btnIdle : ORANGE,
-  btnHover :LIGHT_ORANGE
+  btnHover :LIGHT_ORANGE,
+  headingColor : BLACK  
 };
 
 export const darkTheme = {
@@ -31,7 +32,8 @@ export const darkTheme = {
   textColor : GREY,
   menuBackground : BLACK,
   btnIdle : ORANGE,
-  btnHover :LIGHT_ORANGE
+  btnHover :LIGHT_ORANGE,
+  headingColor : WHITE
 
 };
 

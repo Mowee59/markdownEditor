@@ -4,8 +4,7 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./themes/themes.js";
 import MarkdownProvider from "./providers/markdown-provider/MarkdownProvider.jsx";
-import MainLayout from "./components/layout/MainLayout";
-import HeaderCol from "./components/HeaderCol/HeaderCol.jsx";
+import MainLayout from "./components/Layout/MainLayout.jsx";
 import Editor from "./components/Editor/Editor.jsx";
 import Preview from "./components/Preview/Preview.jsx";
 

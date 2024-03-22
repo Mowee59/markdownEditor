@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     color:${(props) => props.theme.textColor} ;
     scrollbar-color: ${(props) => props.theme.mainBackground} ${(props) => props.theme.menuBackground} ;
     scrollbar-width: thin;
+    overflow: hidden
   }
 
   html {
