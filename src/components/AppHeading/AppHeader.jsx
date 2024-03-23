@@ -3,6 +3,7 @@ import MenuBoutton from "./MenuButton/MenuButton.jsx";
 import LogoHeader from "./LogoHeader/LogoHeader.jsx";
 import DocumentInfo from "../DocumentInfo/DocumentInfo.jsx";
 import VerticalDivider from "./VerticalDivider/VerticalDivider.jsx";
+import FIleBar from "./FileBar/FileBar.jsx";
 
 const AppHeader= ( ) => {
 
@@ -11,6 +12,7 @@ const AppHeader= ( ) => {
       <LogoHeader/>
       <VerticalDivider/>
       <DocumentInfo/>
+      <FIleBar/>
     </StyledAppHeader>
 
 }

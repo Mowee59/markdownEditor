@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
+  display: flex;
+  gap: 0.8rem;
   background-color: ${(props) => props.theme.btnIdle};
   color: ${(props) => props.theme.headingColor};
-  width: 100%;
   font-weight: 400;
-  padding: 16px 32px;
+  padding:  ${(props) => props.small ? '1.6rem' : '1.6rem 3.2rem'};
   border: none;
   border-radius: 4px;
   font-size: 1.5rem;
@@ -21,3 +22,4 @@ const StyledButton = styled.button`
 
 
 export default StyledButton;
+

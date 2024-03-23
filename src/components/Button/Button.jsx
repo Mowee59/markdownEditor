@@ -1,9 +1,9 @@
-import { Children } from "react"
 import StyledButton from "./Button.styled.js"
 
-const Button = ({children}) => (
-  <StyledButton>
-    {children}
+const Button = ({textButton, iconButton, small = false}) => (
+  <StyledButton small = {small}>
+    {iconButton && <img src={iconButton} alt = 'Boutton Icon'/>}
+    {textButton}  
   </StyledButton>
 );
 
