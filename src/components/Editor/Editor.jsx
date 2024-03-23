@@ -1,8 +1,8 @@
 import { useState } from "react";
+import { useContext } from "react";
 import { useMarkdownContext } from "../../providers/markdown-provider/MarkdownProvider.jsx";
 import HeaderCol from "../HeaderCol/HeaderCol"
 import {StyledTextArea, EditorDiv} from "./Editor.styled.js";
-import { useContext } from "react";
 
 const Editor = () => {
 
@@ -14,6 +14,7 @@ const Editor = () => {
   
 
   return(
+
   <EditorDiv>
     <HeaderCol title={'Markdown' }/>
     <StyledTextArea

@@ -7,6 +7,7 @@ const MainLayout = ({children}) => (
 );
 
 MainLayout.Col = ({children}) => (
+  
   <StyledLayoutCol>
     {children}
   </StyledLayoutCol>
