@@ -1,4 +1,3 @@
-
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -8,13 +7,27 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   } 
 
+   //Grid template for app
+  //First col => header
+  //Second col => first row, second row => App header , MainLayout
+
+  #root {
+    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
   body {
    
     font-family: 'Roboto', Sans-Serif;
     font-weight: 400;
     background-color: ${(props) => props.theme.mainBackground};
     color:${(props) => props.theme.textColor} ;
-    scrollbar-color: ${(props) => props.theme.mainBackground} ${(props) => props.theme.menuBackground} ;
+    scrollbar-color: ${(props) => props.theme.mainBackground} ${(props) =>
+  props.theme.menuBackground} ;
     scrollbar-width: thin;
     overflow: hidden
   }
