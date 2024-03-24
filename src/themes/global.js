@@ -1,4 +1,3 @@
-
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -8,13 +7,19 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   } 
 
+  #root {
+    display: flex;
+ 
+  }
+
   body {
    
     font-family: 'Roboto', Sans-Serif;
     font-weight: 400;
     background-color: ${(props) => props.theme.mainBackground};
     color:${(props) => props.theme.textColor} ;
-    scrollbar-color: ${(props) => props.theme.mainBackground} ${(props) => props.theme.menuBackground} ;
+    scrollbar-color: ${(props) => props.theme.mainBackground} ${(props) =>
+  props.theme.menuBackground} ;
     scrollbar-width: thin;
     overflow: hidden
   }
