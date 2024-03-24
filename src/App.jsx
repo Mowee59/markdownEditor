@@ -17,7 +17,6 @@ function App() {
       <GlobalStyle />
       <MarkdownProvider>
         <SideMenu />
-        <div style={{ flexShrink: 0 }}>
           <AppHeader />
           <MainLayout>
             <MainLayout.Col>
@@ -28,7 +27,6 @@ function App() {
               <Preview />
             </MainLayout.Col>
           </MainLayout>
-        </div>
       </MarkdownProvider>
     </ThemeProvider>
   );

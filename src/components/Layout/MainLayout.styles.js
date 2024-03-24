@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledMainLayout = styled.main`
   display: flex;
-  height: 100vh;
+  grid-area: 2 / 2 / 6 / 6;
 `;
 
 
