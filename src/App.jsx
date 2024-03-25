@@ -11,22 +11,29 @@ import SideMenu from "./components/SideMenu/SideMenu.jsx";
 
 function App() {
   const [theme, setTheme] = useState("dark");
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+  const toggleMenu = () => {
+    console.log('called !!!');
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyle />
       <MarkdownProvider>
-        <SideMenu />
-          <AppHeader />
+      {isMenuOpen && <SideMenu />}
+      <div style={{display: 'flex', flexDirection:'column' }}>
+          <AppHeader  toggleMenu={toggleMenu} />
           <MainLayout>
             <MainLayout.Col>
               <Editor />
             </MainLayout.Col>
-
             <MainLayout.Col>
               <Preview />
             </MainLayout.Col>
           </MainLayout>
+          </div>
       </MarkdownProvider>
     </ThemeProvider>
   );
