@@ -6,19 +6,23 @@ import {StyledTextArea, EditorDiv} from "./Editor.styled.js";
 
 const Editor = () => {
 
-  const [markdown, setMarkdown] = useMarkdownContext();
+  const [state, dispatch] = useMarkdownContext();
 
-  const updateMarkdown = (event) => {
-    setMarkdown(event.target.value);
-  }
+  // const updateMarkdown = (event) => {
+  //   setMarkdown(event.target.value);
+  // }
   
+  const updateMarkdown = (event) => {
+    // setMarkdown(event.target.value);
+    dispatch({type:'edit_current_file', content: event.target.value})
+  }
 
   return(
 
   <EditorDiv>
     <HeaderCol title={'Markdown' }/>
     <StyledTextArea
-    value={markdown}
+    value={state.currentFile.content}
     onChange={updateMarkdown}
     />
   </EditorDiv>  

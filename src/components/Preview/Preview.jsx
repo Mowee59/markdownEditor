@@ -5,13 +5,13 @@ import HeaderCol from "../HeaderCol/HeaderCol.jsx";
 import iconPreview from "../../assets/icon-show-preview.svg"
 
 const Preview = () => {
-  const [markdown] = useMarkdownContext();
-
+  const [state] = useMarkdownContext();
+  
   return (
     <PreviewDiv>
       <HeaderCol title={'Preview'} aside={iconPreview}/>
       <PreviewScrollDiv>
-        <ReactMarkdown>{ markdown }</ReactMarkdown>
+        <ReactMarkdown>{ state.currentFile.content }</ReactMarkdown>
       </PreviewScrollDiv>
     </PreviewDiv>
 
