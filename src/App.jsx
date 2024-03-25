@@ -8,6 +8,7 @@ import Editor from "./components/Editor/Editor.jsx";
 import Preview from "./components/Preview/Preview.jsx";
 import AppHeader from "./components/AppHeading/AppHeader.jsx";
 import SideMenu from "./components/SideMenu/SideMenu.jsx";
+import FlexWrapper from "./components/FlewWrapper/FlexWrapper.jsx";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -23,7 +24,7 @@ function App() {
       <GlobalStyle />
       <MarkdownProvider>
       {isMenuOpen && <SideMenu />}
-      <div style={{display: 'flex', flexDirection:'column' }}>
+      <FlexWrapper>
           <AppHeader  toggleMenu={toggleMenu} />
           <MainLayout>
             <MainLayout.Col>
@@ -33,7 +34,7 @@ function App() {
               <Preview />
             </MainLayout.Col>
           </MainLayout>
-          </div>
+          </FlexWrapper>
       </MarkdownProvider>
     </ThemeProvider>
   );

@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
   } 
 
    //Grid template for app
@@ -13,12 +14,20 @@ const GlobalStyle = createGlobalStyle`
 
   #root {
     display: flex;
-    display: grid;
+    /* display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
+    grid-row-gap: 0px; */
+
+    
+     
+  }
+
+  
+
+  
+
 
   body {
    
