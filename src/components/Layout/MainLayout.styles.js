@@ -8,8 +8,8 @@ const StyledMainLayout = styled.main`
 
 
 export const StyledLayoutCol = styled.section`
-  flex: 1;
-  
+  flex: 1 ;
+  max-width: 50%;
 
   &:not(:last-child){
 
