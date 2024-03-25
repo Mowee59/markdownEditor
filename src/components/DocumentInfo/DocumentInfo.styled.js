@@ -1,6 +1,7 @@
 import styled, { ThemeConsumer } from "styled-components";
 
 const  StyledDocumentInfo = styled.div`
+  width: 40%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -17,6 +18,7 @@ StyledDocumentInfo.img = styled.img`
 
 StyledDocumentInfo.ul = styled.ul`
   color: white;
+  width: 100%;
   list-style: none;
   padding: 0;
   margin: 0  1.6rem;
@@ -41,6 +43,7 @@ StyledDocumentInfo.ul.secondLine = styled.li`
 
   input {
     border: none;
+    width: 100%;
     background-color: inherit;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -48,7 +51,16 @@ StyledDocumentInfo.ul.secondLine = styled.li`
     color: #FFF;
     outline: none;
     caret-color: #E46643;
-    caret-shape: bar;
+    margin-bottom: 6px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    
+    &:focus{
+      border-bottom: 1px solid white
+    }
 
   }
 `;
