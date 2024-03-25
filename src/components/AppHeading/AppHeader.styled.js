@@ -3,6 +3,7 @@ import styled from "styled-components";
 const StyledAppHeader = styled.header`
   /* grid-area: 1 / 2 / 2 / 6; */
   display: flex;
+  gap: 2.4rem;
   height: 7.2rem;
   align-items: center;
   width: 100%;

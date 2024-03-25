@@ -12,7 +12,7 @@ import FlexWrapper from "./components/FlewWrapper/FlexWrapper.jsx";
 
 function App() {
   const [theme, setTheme] = useState("light");
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
