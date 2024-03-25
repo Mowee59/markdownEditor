@@ -24,7 +24,8 @@ export const lightTheme = {
   btnHover :LIGHT_ORANGE,
   headingColor : BLACK,
   appHeaderBackground: LIGHTER_BLACK,
-  menuButtonBackground : LIGHTEST_BLACK 
+  menuButtonBackground : LIGHTEST_BLACK,
+  menuTextColor : DARK_GREY 
 };
 
 export const darkTheme = {
@@ -37,7 +38,8 @@ export const darkTheme = {
   btnHover :LIGHT_ORANGE,
   headingColor : WHITE,
   appHeaderBackground: LIGHTER_BLACK,
-  menuButtonBackground : LIGHTEST_BLACK
+  menuButtonBackground : LIGHTEST_BLACK,
+  menuTextColor : DARK_GREY 
 
 };
 
