@@ -6,12 +6,14 @@ import FIleBar from "./FileBar/FileBar.jsx";
 
 const AppHeader= ({toggleMenu} ) => {
 
-  return  <StyledAppHeader>
+  return( 
+    <StyledAppHeader>
       <MenuBoutton onClick={toggleMenu}/>
       <LogoHeader/>
       <VerticalDivider/>
       <FIleBar/>
     </StyledAppHeader>
+    );
 
 }
 

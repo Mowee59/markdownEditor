@@ -3,10 +3,12 @@ import data from '../../data.json';
 import { useReducer } from "react";
 
 const MarkdownContext = createContext(null);
+
 const MarkdownProvider = ({children}) => {
- 
+
+  // Initial document
   const initialFile = {fileName: 'untitled.md ', content: data[1].content};
-  // const [markdown, setMarkdown] = useState(data[1].content);
+  
   const [state, dispatch] = useReducer(reducer,  {
     files:
       initialFile,
@@ -15,13 +17,22 @@ const MarkdownProvider = ({children}) => {
 
   function reducer(state, action){
 
-    
+    let newState;
+    newState = {... state}
 
     switch(action.type){
       case 'edit_current_file':
-        let newState = {...state}
         newState.currentFile.content = action.content;
         return newState;
+
+       case 'edit_current_fileName':
+        // newState.currentFile.fileName = action.content;
+        console.log(newState.currentFile.fileName)
+        return newState;
+
+        default:
+          console.log('something went wrong');
+          return state;
     }
 
   }

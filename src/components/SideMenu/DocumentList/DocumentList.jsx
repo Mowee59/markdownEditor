@@ -4,7 +4,7 @@ import StyledDocumentList from "./DocumentList.styled";
 const DocumentList = () => {
   return(
     <StyledDocumentList>
-      <DocumentInfo/>
+      <DocumentInfo />
     </StyledDocumentList>
   );
 }
