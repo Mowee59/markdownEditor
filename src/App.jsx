@@ -15,7 +15,6 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   const toggleMenu = () => {
-    console.log('called !!!');
     setIsMenuOpen(!isMenuOpen);
   };
 
