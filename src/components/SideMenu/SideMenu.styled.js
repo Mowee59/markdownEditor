@@ -7,8 +7,8 @@ const StyledSideMenu = styled.aside`
   flex: 0 0 auto;
   height: 100vh;
   width: 25rem;
-  background-color: ${(props) => props.theme.menuBackground};
-  padding: 3.2rem 2.4rem;
+  background-color: ${(props) => props.theme.sideMenuBackground};
+  padding: 2.4rem 3.2rem;
   
   h1 {
     color: ${(props) => props.theme.menuTextColor};

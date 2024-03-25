@@ -12,8 +12,9 @@
  const LIGHTEST_GREY= "#F5F5F5";
  const WHITE=  "#FFF";
  const ORANGE= "#E46643";
-const LIGHT_ORANGE= "#F39765";
+ const LIGHT_ORANGE= "#F39765";
 
+//TODO : fix theme
 
 export const lightTheme = {
   mainBackground : WHITE,
@@ -25,7 +26,9 @@ export const lightTheme = {
   headingColor : BLACK,
   appHeaderBackground: LIGHTER_BLACK,
   menuButtonBackground : LIGHTEST_BLACK,
-  menuTextColor : DARK_GREY 
+  menuTextColor : DARK_GREY,
+  sideMenuBackground : BLACK,
+        
 };
 
 export const darkTheme = {
@@ -39,7 +42,9 @@ export const darkTheme = {
   headingColor : WHITE,
   appHeaderBackground: LIGHTER_BLACK,
   menuButtonBackground : LIGHTEST_BLACK,
-  menuTextColor : DARK_GREY 
+  menuTextColor : DARK_GREY,
+  sideMenuBackground : BLACK,
+                
 
 };
 

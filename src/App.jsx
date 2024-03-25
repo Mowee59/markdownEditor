@@ -11,7 +11,7 @@ import SideMenu from "./components/SideMenu/SideMenu.jsx";
 import FlexWrapper from "./components/FlewWrapper/FlexWrapper.jsx";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   const toggleMenu = () => {
@@ -19,10 +19,10 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme} >
       <GlobalStyle />
       <MarkdownProvider>
-      {isMenuOpen && <SideMenu />}
+      {isMenuOpen && <SideMenu setTheme={setTheme} theme={theme}/>}
       <FlexWrapper>
           <AppHeader  toggleMenu={toggleMenu} />
           <MainLayout>

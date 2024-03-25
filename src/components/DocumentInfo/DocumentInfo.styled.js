@@ -28,7 +28,7 @@ StyledDocumentInfo.ul = styled.ul`
 
 StyledDocumentInfo.ul.firstLine = styled.li`
   font-family: 'Roboto', sans-serif;
-  color: ${(props) => props.theme.textColor};
+  color: #C1C4CB;
   font-weight: 300;
   font-size: 1.3rem;
   letter-spacing: 1px;
@@ -39,7 +39,7 @@ StyledDocumentInfo.ul.secondLine = styled.li`
   font-weight: 400;
   font-size: 1.5rem;
   margin: 4px 0;
-  color: ${(props) => props.theme.headingColor};
+  color: #FFF;
 
 `;
 
