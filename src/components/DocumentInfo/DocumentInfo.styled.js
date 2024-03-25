@@ -1,7 +1,7 @@
 import styled, { ThemeConsumer } from "styled-components";
 
 const  StyledDocumentInfo = styled.div`
-  width: 40%;
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
