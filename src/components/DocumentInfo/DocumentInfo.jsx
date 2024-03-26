@@ -2,7 +2,6 @@ import { useState } from 'react';
 import documentIcon from '../../assets/icon-document.svg'
 import { useMarkdownContext } from '../../providers/markdown-provider/MarkdownProvider.jsx';
 import StyledDocumentInfo from './DocumentInfo.styled.js';
-import { TEMP_CURRFILE } from '../../providers/markdownReducer.js';
 
 
 
@@ -11,8 +10,8 @@ import { TEMP_CURRFILE } from '../../providers/markdownReducer.js';
 // TODO pass fileName and Date props
 const DocumentInfo = () => {
 
-  const [state, dispatch] = useMarkdownContext();
-  const [userInput, setUserInput] = useState(TEMP_CURRFILE);
+  const {state, dispatch, currentFileName} = useMarkdownContext();
+  const [userInput, setUserInput] = useState(currentFileName);
 
   // TODO Check for extension and verify filename
 

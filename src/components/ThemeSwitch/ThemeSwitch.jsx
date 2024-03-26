@@ -12,7 +12,7 @@ const ThemeSwitch = ({theme, setTheme}) => {
   return(
   <StyledThemeSwitch >
     <StyledThemeSwitch.DarkIcon theme={theme} src={iconDarkMode} alt="Icon dark mode"/>
-      <StyledThemeSwitch.checkBox defaultChecked="true" onClick={toggleTheme} type="checkbox" />
+      <StyledThemeSwitch.checkBox defaultChecked={ theme === 'light' } onClick={toggleTheme} type="checkbox" />
     <StyledThemeSwitch.LightIcon theme={theme} src={iconLightMode} alt="Icon light mode"/>
   </StyledThemeSwitch>
   );

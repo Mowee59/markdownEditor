@@ -19,7 +19,7 @@ const MarkdownProvider = ({children}) => {
   
 
   return(
-  <MarkdownContext.Provider value={[state, dispatch, currentFileName]}>
+  <MarkdownContext.Provider value={{state, dispatch, currentFileName}}>
     {children}
   </MarkdownContext.Provider>
   );
