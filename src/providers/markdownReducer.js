@@ -12,6 +12,8 @@ function markdownReducer(state, action){
 
   switch(action.type){
 
+    //TODO DElete FIle
+
     // Update the content of a specific file
     case Actions.EDIT_FILECONTENT:
       // Getting the file, changing the content, putting it back into the Map

@@ -1,4 +1,5 @@
 import iconMenu from "../../../assets/icon-menu.svg";
+import iconClose from "../../../assets/icon-close.svg";
 import StyledMenuButton from "./MenuButton.styled.js";
 
 const MenuBoutton = ({onClick}) => (

@@ -4,7 +4,7 @@ import LogoHeader from "./LogoHeader/LogoHeader.jsx";
 import VerticalDivider from "./VerticalDivider/VerticalDivider.jsx";
 import FIleBar from "./FileBar/FileBar.jsx";
 
-const AppHeader= ({toggleMenu} ) => {
+const AppHeader= ({toggleMenun} ) => {
 
   return( 
     <StyledAppHeader>

@@ -14,6 +14,7 @@ function App() {
   const [theme, setTheme] = useState("light");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Use context for menu state and renering button
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };

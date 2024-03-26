@@ -30,6 +30,7 @@ const DocumentList = () => {
       {
       documentList.map(([fileName, content]) => (
         <DocumentInfo 
+        key={fileName}
         fileName={fileName}
         firstLineText={content.createdAt}/>
       ))
