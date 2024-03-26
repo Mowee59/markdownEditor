@@ -28,6 +28,7 @@ const MarkdownProvider = ({children}) => {
   // Initial document
   const initialFile = {fileName: 'untitled.md ', content: data[1].content};
   
+  // Decalring reducer
   const [state, dispatch] = useReducer(reducer,  {
     files:
       initialFile,

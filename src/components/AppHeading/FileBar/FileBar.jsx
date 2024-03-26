@@ -6,7 +6,7 @@ import DocumentInfo from "../../DocumentInfo/DocumentInfo.jsx";
 
 const FIleBar = () => {
 
-
+// TODO create a getCurrentFile func
 
 return( 
   <StyledFileBar>

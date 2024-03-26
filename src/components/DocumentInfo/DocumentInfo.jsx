@@ -7,7 +7,7 @@ import StyledDocumentInfo from './DocumentInfo.styled.js';
 
 
 
-
+// TODO pass fileName and Date props
 const DocumentInfo = () => {
 
   const [state, dispatch] = useMarkdownContext();
