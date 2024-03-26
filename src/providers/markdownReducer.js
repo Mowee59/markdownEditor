@@ -1,38 +1,42 @@
 // Action types
-export const SET_INITIAL_STATE = 'SET_INITIAL_STATE';
-export const EDIT_FILECONTENT = 'EDIT_FILECONTENT';
-export const EDIT_CURRENT_FILENAME = 'EDIT_CURRENT_FILE';
-export const TEMP_CURRFILE = 'welcome.md';
-
+export const Actions = {
+  SET_INITIAL_STATE: 'SET_INITIAL_STATE',
+  EDIT_FILECONTENT: 'EDIT_FILECONTENT',
+  EDIT_FILENAME: 'EDIT_FILENAME',
+};
 
 function markdownReducer(state, action){
 
-
   // Making a depp clone of the current state
   let newState = structuredClone(state);
-  
-
-
 
   switch(action.type){
 
-    // Getting the file, changing the content, putting it back into the Map
-    case EDIT_FILECONTENT:
-      const file = newState.get(action.payload.fileName);
-      file.content = action.payload.content;
-      newState.set(action.payload.fileName, file);
+    // Update the content of a specific file
+    case Actions.EDIT_FILECONTENT:
+      // Getting the file, changing the content, putting it back into the Map
+      const fileName = action.payload.fileName;
+      const fileToEdit = newState.get(fileName);
+      fileToEdit.content = action.payload.content;
+      newState.set(fileName, fileToEdit);
       return newState;
 
-    case 'edit_current_fileName':
-      // newState.currentFile.fileName = action.content;
-      // console.log(newState.currentFile.fileName)
-      return newState;
+      // Change the name of a specific file
+      case EDIT_FILENAME:
+        // Getting the file, remove it from the map, add it again with new name
+        const oldName = action.payload.oldName;
+        const newName = action.payload.newName;
+        let fileToRename = newState.get(oldName);
+        newState.delete(oldName);
+        newState.set(newName, fileToRename);
+        return newState;
 
-    case SET_INITIAL_STATE:
-       // Converting the json Object to a map with fileName as Key
-       newState = new Map(Object.entries(data));
-       console.log(newState);
-       return newState;
+
+      case SET_INITIAL_STATE:
+        // Converting the json Object to a map with fileName as Key
+        newState = new Map(Object.entries(data));
+        console.log(newState);
+        return newState;
 
 
     default:
