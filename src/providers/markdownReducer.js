@@ -1,6 +1,6 @@
 // Action types
 export const SET_INITIAL_STATE = 'SET_INITIAL_STATE';
-export const EDIT_CURRENT_FILECONTENT = 'EDIT_CURRENT_FILECONTENT';
+export const EDIT_FILECONTENT = 'EDIT_FILECONTENT';
 export const EDIT_CURRENT_FILENAME = 'EDIT_CURRENT_FILE';
 export const TEMP_CURRFILE = 'welcome.md';
 
@@ -17,10 +17,10 @@ function markdownReducer(state, action){
   switch(action.type){
 
     // Getting the file, changing the content, putting it back into the Map
-    case EDIT_CURRENT_FILECONTENT:
-      const file = newState.get(TEMP_CURRFILE);
-      file.content = action.payload;
-      newState.set(TEMP_CURRFILE, file);
+    case EDIT_FILECONTENT:
+      const file = newState.get(action.payload.fileName);
+      file.content = action.payload.content;
+      newState.set(action.payload.fileName, file);
       return newState;
 
     case 'edit_current_fileName':
