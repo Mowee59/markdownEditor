@@ -10,9 +10,15 @@ const FIleBar = () => {
 
 return( 
   <StyledFileBar>
-    <DocumentInfo />
+    <DocumentInfo
+     editable='true'
+     firstLineText='Document Name'
+     />
     < StyledFileBar.img src={iconDelete} alt="Icon Delete"/>
-    <Button small iconButton={iconSave} textButton='Save Changes'/>
+    <Button 
+    small 
+    iconButton={iconSave} 
+    textButton='Save Changes'/>
   </StyledFileBar>
 );
 

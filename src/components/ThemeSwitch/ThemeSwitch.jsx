@@ -1,13 +1,14 @@
 import StyledThemeSwitch from "./ThemeSwitch.styled.js"
 import iconDarkMode from "../../assets/icon-dark-mode.svg"
 import iconLightMode from "../../assets/icon-light-mode.svg"
-import  {ReactSVG}  from "react-svg"
-import { useEffect } from "react"
+
 
 const ThemeSwitch = ({theme, setTheme}) => {
+
+  
   const toggleTheme = () =>  theme === 'light' ?  setTheme('dark') : setTheme('light');
   
-  useEffect(()=> console.log('rendered'),[theme]);
+  
 
   return(
   <StyledThemeSwitch >

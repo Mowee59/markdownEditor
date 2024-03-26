@@ -22,7 +22,7 @@ function markdownReducer(state, action){
       return newState;
 
       // Change the name of a specific file
-      case EDIT_FILENAME:
+      case Actions.EDIT_FILENAME:
         // Getting the file, remove it from the map, add it again with new name
         const oldName = action.payload.oldName;
         const newName = action.payload.newName;
@@ -32,7 +32,7 @@ function markdownReducer(state, action){
         return newState;
 
 
-      case SET_INITIAL_STATE:
+      case Actions.SET_INITIAL_STATE:
         // Converting the json Object to a map with fileName as Key
         newState = new Map(Object.entries(data));
         console.log(newState);

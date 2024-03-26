@@ -7,12 +7,11 @@ const Editor = () => {
 
   const {state, dispatch, currentFileName} = useMarkdownContext();
 
-  // const updateMarkdown = (event) => {
-  //   setMarkdown(event.target.value);
-  // }
+ 
+
   
   const updateMarkdown = (event) => {
-    // setMarkdown(event.target.value);
+    
     dispatch({
       type:Actions.EDIT_FILECONTENT,
       payload: 

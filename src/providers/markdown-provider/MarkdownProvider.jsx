@@ -15,11 +15,11 @@ const MarkdownProvider = ({children}) => {
   const [state, dispatch] = useReducer(markdownReducer, new Map(Object.entries(data)));
 
   //TODO rewrite fileName init
-  const [currentFileName] = useState('welcome.md');
+  const [currentFileName, setCurrentFileName] = useState('welcome.md');
   
 
   return(
-  <MarkdownContext.Provider value={{state, dispatch, currentFileName}}>
+  <MarkdownContext.Provider value={{state, dispatch, currentFileName, setCurrentFileName}}>
     {children}
   </MarkdownContext.Provider>
   );
