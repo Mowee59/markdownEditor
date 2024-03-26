@@ -1,71 +1,19 @@
 import { useState, createContext, useContext } from "react";
-import data from '../../data.json';
+import markdownReducer from "../markdownReducer.js";
 import { useReducer } from "react";
-import { useEffect } from "react";
+import data from '../../../public/data.json';
 
 const MarkdownContext = createContext(null);
 
 const MarkdownProvider = ({children}) => {
-
-  let [intialData, setData] = useState(null);
-
-  //fetchig intial content
-  useEffect( () => { 
-
-    fetch('/src/data.json')
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-        dispatch( { type: 'set_intialState', content: data} )
-      })
-      .catch((e) => console.error(e));
-
-  } 
-    ,[]);
-
-  // Initial document
-  const initialFile = {fileName: 'untitled.md ', content: data[1].content};
   
-  // Decalring reducer
-  const [state, dispatch] = useReducer(reducer,  {
-    files:
-      initialFile,
-    currentFile : initialFile
-    });
+  // Initialazing global state fromm data.json, in the form of a map :
+  //  
+  //  fileName => (content, createdAt)
+  //
 
-  function reducer(state, action){
-
-    let newState;
-    newState = {... state}
-
-    switch(action.type){
-      case 'edit_current_file':
-        newState.currentFile.content = action.content;
-        return newState;
-
-      case 'edit_current_fileName':
-        // newState.currentFile.fileName = action.content;
-        console.log(newState.currentFile.fileName)
-        return newState;
-
-      case 'set_intialState':
-         for (let file of action.content){
-          newState = {...newState, file}
-         }
-         console.log(newState);
-
-
-      default:
-        console.log('something went wrong');
-        return state;
-    }
-
-  }
-
-
-
+  const [state, dispatch] = useReducer(markdownReducer, new Map(Object.entries(data)));
+  
 
   return(
   <MarkdownContext.Provider value={[state, dispatch]}>

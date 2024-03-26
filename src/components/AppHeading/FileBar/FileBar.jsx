@@ -3,10 +3,10 @@ import iconSave from "../../../assets/icon-save.svg"
 import StyledFileBar from "./FileBar.styled.js";
 import Button from "../../Button/Button.jsx";
 import DocumentInfo from "../../DocumentInfo/DocumentInfo.jsx";
+import { useMarkdownContext } from "../../../providers/markdown-provider/MarkdownProvider.jsx";
 
 const FIleBar = () => {
 
-// TODO create a getCurrentFile func
 
 return( 
   <StyledFileBar>

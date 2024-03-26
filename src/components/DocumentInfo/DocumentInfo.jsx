@@ -2,6 +2,7 @@ import { useState } from 'react';
 import documentIcon from '../../assets/icon-document.svg'
 import { useMarkdownContext } from '../../providers/markdown-provider/MarkdownProvider.jsx';
 import StyledDocumentInfo from './DocumentInfo.styled.js';
+import { TEMP_CURRFILE } from '../../providers/markdownReducer.js';
 
 
 
@@ -11,20 +12,21 @@ import StyledDocumentInfo from './DocumentInfo.styled.js';
 const DocumentInfo = () => {
 
   const [state, dispatch] = useMarkdownContext();
-  const [userInput, setUserInput] = useState(state.currentFile.fileName);
+  const [userInput, setUserInput] = useState(TEMP_CURRFILE);
 
   // TODO Check for extension and verify filename
-  const changeFileName = (event) => {
-    const newFileName = event.target.value;
-    console.log(newFileName)
-      dispatch({action: 'edit_current_fileName', content: newFileName});
-  }
+
+  // const changeFileName = (event) => {
+  //   const newFileName = event.target.value;
+  //   console.log(newFileName)
+  //     dispatch({action: 'edit_current_fileName', content: newFileName});
+  // }
   
-  const handleInput = ( event ) => {
-    console.log('handledinput')
-    const userInput = event.target.value
-    setUserInput(userInput)
-  }
+   const handleInput = ( event ) => {
+     console.log('handledinput')
+     const userInput = event.target.value
+     setUserInput(userInput)
+   }
 
   
 
@@ -38,7 +40,7 @@ const DocumentInfo = () => {
           type='text' 
           value={userInput} 
           onInput={handleInput}
-          onBlur={changeFileName}
+          // onBlur={changeFileName}
           maxLength={50}
           />
           </StyledDocumentInfo.ul.secondLine>
