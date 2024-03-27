@@ -34,11 +34,13 @@ function markdownReducer(state, action){
         return newState;
 
 
-      case Actions.SET_INITIAL_STATE:
-        // Converting the json Object to a map with fileName as Key
-        newState = new Map(Object.entries(data));
-        console.log(newState);
-        return newState;
+      // case Actions.SET_INITIAL_STATE:
+      //   // Converting the json Object to a map with fileName as Key
+      //   newState = new Map(Object.entries(data));
+      //   console.log(newState);
+      //   return newState;
+
+      
 
 
     default:

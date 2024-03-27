@@ -8,17 +8,10 @@ const GlobalStyle = createGlobalStyle`
     
   } 
 
-   //Grid template for app
-  //First col => header
-  //Second col => first row, second row => App header , MainLayout
+
 
   #root {
     display: flex;
-    /* display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; */
 
     
      
