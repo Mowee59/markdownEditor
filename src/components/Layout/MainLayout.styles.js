@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
-
 const StyledMainLayout = styled.main`
   display: flex;
+
   /* grid-area: 2 / 2 / 6 / 6; */
 `;
 
-
 export const StyledLayoutCol = styled.section`
-  flex: 1 ;
+  flex: 1;
   max-width: 50%;
 
-  &:not(:last-child){
+  &:first-child {
+    visibility: ${(props) => (props.$previewMode ? "collapse" : "visible")};
+  }
 
-    border-right: 0.1rem solid ${(props) => props.theme.border}
-    
-
+  &:not(:last-child) {
+    border-right: 0.1rem solid ${(props) => props.theme.border};
   }
 `;
 

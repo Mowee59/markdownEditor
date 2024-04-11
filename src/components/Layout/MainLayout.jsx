@@ -1,16 +1,12 @@
-import StyledMainLayout, {StyledLayoutCol} from "./MainLayout.styles.js";
+import { useState } from "react";
+import StyledMainLayout, { StyledLayoutCol } from "./MainLayout.styles.js";
 
-const MainLayout = ({children}) => (
-  <StyledMainLayout>
-    {children}
-  </StyledMainLayout>
-);
+const MainLayout = ({ children }) => {
+  return <StyledMainLayout>{children}</StyledMainLayout>;
+};
 
-MainLayout.Col = ({children}) => (
-  
-  <StyledLayoutCol>
-    {children}
-  </StyledLayoutCol>
+MainLayout.Col = ({ children, previewMode = false }) => (
+  <StyledLayoutCol $previewMode={previewMode}>{children}</StyledLayoutCol>
 );
 
 export default MainLayout;
