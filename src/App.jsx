@@ -20,12 +20,12 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme} >
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyle />
       <MarkdownProvider>
-      {isMenuOpen && <SideMenu setTheme={setTheme} theme={theme}/>}
-      <FlexWrapper>
-          <AppHeader  toggleMenu={toggleMenu} />
+        {isMenuOpen && <SideMenu setTheme={setTheme} theme={theme} />}
+        <FlexWrapper>
+          <AppHeader toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
           <MainLayout>
             <MainLayout.Col>
               <Editor />
@@ -34,7 +34,7 @@ function App() {
               <Preview />
             </MainLayout.Col>
           </MainLayout>
-          </FlexWrapper>
+        </FlexWrapper>
       </MarkdownProvider>
     </ThemeProvider>
   );
