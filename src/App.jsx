@@ -23,6 +23,7 @@ function App() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // TODO Use context for previewMode state
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyle />
@@ -35,7 +36,7 @@ function App() {
               <Editor />
             </MainLayout.Col>
             <MainLayout.Col previewMode={previewMode}>
-              <Preview />
+              <Preview previewMode={previewMode} />
             </MainLayout.Col>
           </MainLayout>
         </FlexWrapper>

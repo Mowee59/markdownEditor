@@ -106,8 +106,8 @@ const PreviewScrollDiv = styled.div`
 `;
 
 const ContentPreview = styled.div`
-  max-width: 67.2rem;
-  margin: 0 auto;
+  max-width: ${(props) => (props.$previewMode ? "67.2rem" : "100%")};
+  margin: ${(props) => (props.$previewMode ? "0 auto" : "0")};
 `;
 
 export { PreviewDiv, PreviewScrollDiv, ContentPreview };
