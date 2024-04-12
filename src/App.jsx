@@ -14,7 +14,7 @@ import { useRef } from "react";
 function App() {
   const [theme, setTheme] = useState("light");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [previewMode, setPreviewEMode] = useState(true);
+  const [previewMode, setPreviewEMode] = useState(false);
 
   const editorColRef = useRef(null);
 
@@ -34,7 +34,7 @@ function App() {
             <MainLayout.Col previewMode={previewMode}>
               <Editor />
             </MainLayout.Col>
-            <MainLayout.Col>
+            <MainLayout.Col previewMode={previewMode}>
               <Preview />
             </MainLayout.Col>
           </MainLayout>
