@@ -13,7 +13,6 @@ const Preview = ({ previewMode, setPreviewMode }) => {
 
   const togglePreviewMode = () => {
     setPreviewMode(!previewMode);
-    console.log("toggled");
   };
 
   return (

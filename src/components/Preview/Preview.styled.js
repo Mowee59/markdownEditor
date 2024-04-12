@@ -103,6 +103,17 @@ const PreviewScrollDiv = styled.div`
     padding: 3.2rem 2.4rem;
     border-left: 4px solid ${(props) => props.theme.btnIdle};
   }
+
+  pre {
+    background-color: ${(props) => props.theme.preBackground};
+    padding: 2.4rem;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    overflow-x: auto;
+    color: ${(props) => props.theme.textColor};
+  }
 `;
 
 const ContentPreview = styled.div`

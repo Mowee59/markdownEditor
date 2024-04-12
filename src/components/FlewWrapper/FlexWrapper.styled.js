@@ -5,6 +5,7 @@ const StyledFlexWrapper = styled.div`
   flex-direction: column;
   flex: 0 0 auto;
   width: 100vw;
+  max-height: 100vh;
 `;
 
 export default StyledFlexWrapper;
