@@ -9,12 +9,12 @@ import Preview from "./components/Preview/Preview.jsx";
 import AppHeader from "./components/AppHeading/AppHeader.jsx";
 import SideMenu from "./components/SideMenu/SideMenu.jsx";
 import FlexWrapper from "./components/FlewWrapper/FlexWrapper.jsx";
-import { useRef } from "react";
+import PreviewIcon from "./components/Preview/PreviewIcon/PreviewIcon.jsx";
 
 function App() {
   const [theme, setTheme] = useState("light");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [previewMode, setPreviewEMode] = useState(false);
+  const [previewMode, setPreviewMode] = useState(true);
 
   // Use context for menu state and renering button
   const toggleMenu = () => {
@@ -34,7 +34,10 @@ function App() {
               <Editor />
             </MainLayout.Col>
             <MainLayout.Col previewMode={previewMode}>
-              <Preview previewMode={previewMode} />
+              <Preview
+                previewMode={previewMode}
+                setPreviewMode={setPreviewMode}
+              />
             </MainLayout.Col>
           </MainLayout>
         </FlexWrapper>

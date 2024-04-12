@@ -6,14 +6,24 @@ import {
   PreviewScrollDiv,
 } from "./Preview.styled.js";
 import HeaderCol from "../HeaderCol/HeaderCol.jsx";
-import iconPreview from "../../assets/icon-show-preview.svg";
+import PreviewIcon from "./PreviewIcon/PreviewIcon.jsx";
 
-const Preview = ({ previewMode }) => {
+const Preview = ({ previewMode, setPreviewMode }) => {
   const { state, currentFileName } = useMarkdownContext();
+
+  const togglePreviewMode = () => {
+    setPreviewMode(!previewMode);
+    console.log("toggled");
+  };
 
   return (
     <PreviewDiv>
-      <HeaderCol title={"Preview"} aside={iconPreview} />
+      <HeaderCol
+        title={"Preview"}
+        aside={
+          <PreviewIcon previewMode={previewMode} onClick={togglePreviewMode} />
+        }
+      />
       <PreviewScrollDiv>
         <ContentPreview $previewMode={previewMode}>
           <ReactMarkdown>{state.get(currentFileName)?.content}</ReactMarkdown>
