@@ -16,8 +16,6 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [previewMode, setPreviewEMode] = useState(false);
 
-  const editorColRef = useRef(null);
-
   // Use context for menu state and renering button
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
